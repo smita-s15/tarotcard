@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
     return (
-        <AppBar position='static' color='transparent' sx={{ margin: '20px auto', boxShadow: 'none', }}>
-            <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'space-between', }}>
+        <AppBar position='static' color='transparent' sx={{ boxShadow: 'none', }}>
+            <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'space-between',margin: '20px 30px',  }}>
                 <NavLink to="/" style={{justifyContent:'center', display:'flex'}} >
                     <img src={require("../../ui/assets/common/tarot card reading.png")} alt="" style={{ width: '100%' }} />
                 </NavLink>
-                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '30px', mr: '20px', color: '#FFD76DE8' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '30px',color: '#FFD76DE8' }}>
                     {data.map((item, index) =>
                         <NavLink key={index} to={item.link}
                             style={{
@@ -34,11 +34,11 @@ export const Navbar = () => {
 const data = [
     {
         title: "Home",
-        link: "#"
+        link: "/"
     },
     {
         title: "What I do",
-        link: "#"
+        link: "/WhatIDo"
     },
     {
         title: "Book Sessions",
@@ -50,6 +50,6 @@ const data = [
     },
     {
         title: "Contacts",
-        link: "#"
+        link: "/Contact"
     },
 ]

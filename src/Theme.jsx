@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import "@fontsource/montserrat";
+import "@fontsource/inter"
 
 
 const defaultTheme = createTheme({
@@ -26,7 +27,7 @@ const defaultTheme = createTheme({
         },
     },
     typography: {
-        fontFamily:["Bohemias Soul", 'sans-serif'].join(',')
+        fontFamily:"Bohemias Soul",
     },
 });
 
@@ -36,19 +37,33 @@ const theme = {
     components: {
         MuiTypography: {
             styleOverrides: {
-                h2: {
+                h1: {
                     fontStyle: "normal",
                     fontWeight: 400,
                     fontSize: "38px",
                     lineHeight: "53.2px",
                     fontFamily: 'Bohemian Soul', 
                 }, 
-                h6: {
+                h2: {
+                    fontStyle: "normal",
+                    fontWeight: 700,
+                    fontSize: "40px",
+                    lineHeight: "35px",
+                    fontFamily: 'montesrrat', 
+                }, 
+                h5: {
+                    fontFamily: 'monteserrat', 
                     fontStyle: "normal",
                     fontWeight: 400,
+                    fontSize: "24px",
+                    lineHeight: "28.8px",
+                }, 
+                h6: {
+                    fontFamily: 'monteserrat', 
+                    fontStyle: "normal",
+                    fontWeight: 500,
                     fontSize: "20px",
                     lineHeight: "26px",
-                    fontFamily: 'monteserrat', 
                 }, 
             },
         },

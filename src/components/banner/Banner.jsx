@@ -17,8 +17,8 @@ export const Banner = () => {
             <img src={require("../../ui/assets/banner/Eclectic Divinations by Raina (1).png")} alt="" style={{ height: '80%', }} />
           </Box>
         </Box>
-        <Box width='80%'>
-          <img src={require("../../ui/assets/banner/Personalized, professional readings to keep you looking on the bright side.png")} alt="" style={{ width: '100%' }} />
+        <Box width='70%'>
+          <Typography variant='h1' textAlign='center' color='#FFD76D'>Personalized, professional readings to keep you looking on the bright side</Typography>
         </Box>
         <br />  <br />
        <Title>Who are we</Title>
