@@ -65,17 +65,17 @@ export const TarrotReading = () => {
 
 const Data = [
   {
-    title1: ' 20 minutes',
+    title1: '20 minutes',
     title2: '999/-',
     img: <img src={require("../../assets/BookSession/Rectangle 45.png")} alt='' />,
   },
   {
-    title1: ' 45 minutes',
+    title1: '45 minutes',
     title2: '1999/-',
     img: <img src={require("../../assets/BookSession/Rectangle 45.png")} alt='' />,
   },
   {
-    title1: ' 75 minutes',
+    title1: '75 minutes',
     title2: '2999/-',
     img: <img src={require("../../assets/BookSession/Rectangle 45.png")} alt='' />,
   },

@@ -7,7 +7,7 @@ export const Banner = () => {
     <>
       <Container fixed sx={{ padding: '200px auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '30px' }} >
         <Box sx={{ m: '5%', display: 'flex', flexDirection: 'row', width: { xs: '100%', md: '70%' }, justifyContent: 'center', }}>
-          <Box sx={{ display: 'flex', alignItems: 'flex-end', }}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-end',  }}>
             <img src={require("../../ui/assets/banner/Eclectic Divinations by Raina.png")} alt="" style={{ height: '80%', }} />
           </Box>
           <Box  >

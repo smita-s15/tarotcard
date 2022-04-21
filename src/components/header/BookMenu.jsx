@@ -49,6 +49,21 @@ export default function BookMenu() {
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
+        PaperProps={{
+          sx: {
+            background: "rgba( 19, 11, 70, 0.25 )",
+            boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+            backdropFilter: "blur( 4px )",
+            WebkitBackdropFilter: "blur( 4px )",
+            border: "1px solid rgba( 255, 255, 255, 0.18 )",
+            height: 'auto',
+            textAlign: 'center',
+            gap: '10px',
+            marginX: "auto",
+            alignItems: 'center',
+            color:'#FFD76D'
+          }
+        }}
       >
         <MenuItem
           component="a"
