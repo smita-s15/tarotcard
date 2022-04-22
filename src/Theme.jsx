@@ -1,7 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import "@fontsource/montserrat";
-import "@fontsource/inter"
-
+import './index.css'
 
 const defaultTheme = createTheme({
     palette: {
@@ -27,8 +25,8 @@ const defaultTheme = createTheme({
         },
     },
     typography: {
-        fontFamily:"Bohemias Soul",
-    },
+        fontFamily: "BohemianSoul, monteserat",
+    }
 });
 
 
@@ -39,32 +37,54 @@ const theme = {
             styleOverrides: {
                 h1: {
                     fontStyle: "normal",
-                    fontWeight: 400,
+                    fontFamily: 'Bohemian Soul',
+                    fontWeight: 600,
                     fontSize: "38px",
                     lineHeight: "53.2px",
-                    fontFamily: 'Bohemian Soul', 
-                }, 
+                    [defaultTheme.breakpoints.down(900)]: {
+                        fontSize: "20px", lineHeight: "30px"
+                    },
+                },
                 h2: {
-                    fontStyle: "normal",
-                    fontWeight: 700,
-                    fontSize: "40px",
-                    lineHeight: "35px",
-                    fontFamily: 'montesrrat', 
-                }, 
-                h5: {
-                    fontFamily: 'monteserrat', 
+                    fontFamily: 'Bohemian Soul',
                     fontStyle: "normal",
                     fontWeight: 400,
-                    fontSize: "24px",
-                    lineHeight: "28.8px",
-                }, 
-                h6: {
-                    fontFamily: 'monteserrat', 
+                    fontSize: "32px",
+                    lineHeight: "43px",
+                    [defaultTheme.breakpoints.down(900)]: {
+                        fontSize: '25px', lineHeight: '30px'
+                    }
+                },
+                h3: {
+                    fontFamily: 'montserrat',
                     fontStyle: "normal",
                     fontWeight: 500,
+                    fontSize: "24px",
+                    lineHeight: "22px",
+                    [defaultTheme.breakpoints.down(900)]: {
+                        fontSize: '20px', lineHeight: '25px'
+                    }
+                },
+                h5: {
+                    fontFamily: 'montserrat',
+                    fontStyle: "normal",
+                    fontWeight: 400,
                     fontSize: "20px",
                     lineHeight: "26px",
-                }, 
+                    [defaultTheme.breakpoints.down(900)]: {
+                        fontSize: "15px",lineHeight: '20px'
+                    },
+                },
+                h6: {
+                    fontFamily: 'montserrat',
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    lineHeight: "26px",
+                    [defaultTheme.breakpoints.down(900)]: {
+                        fontSize: "13px",lineHeight: "20px",
+                    },
+                },
             },
         },
     },

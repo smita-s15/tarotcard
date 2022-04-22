@@ -4,12 +4,12 @@ import React from 'react'
 
 export const Title = ({ children }) => {
   return (
-    <Box sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', width:'100%' }}>
-      <img src={require("../../ui/assets/common/Line 1.png")} alt="" />
-      <Typography variant='h2' color='#FFD76D' >
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems:'center', width:'100%' }}>
+     <Box borderBottom='1px solid #FFD76D' width={{xs:'15%', md:'20%'}} />
+      <Typography variant='h2' color='#FFD76D' textAlign='center'  >
         {children}
       </Typography>
-      <img src={require("../../ui/assets/common/Line 1.png")} alt="" />
+      <Box borderBottom='1px solid #FFD76D' width={{xs:'15%', md:'20%'}} />
     </Box>
   )
 }

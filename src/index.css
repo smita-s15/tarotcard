@@ -1,12 +1,20 @@
-
-
 body {
   margin: 0;
   padding: 0;
   background-image: url("./ui/assets/common/rough.png");
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Monteserrat;
 }
-
+@font-face {
+  font-family: GothamMedium;
+  src: url("./ui/fonts/Montserrat/Montserrat-Bold.ttf");
+  format: ("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url("./ui/fonts/bohemian-soul/BohemianSoul-Regular.otf");
+  format: ("otf");
+  font-display: swap;
+}

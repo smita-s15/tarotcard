@@ -1,19 +1,19 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
-import { Box, width } from '@mui/system'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 
 export const TarrotReading = () => {
   return (
-    <Container fixed sx={{ padding: '100px auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '30px' }} >
+    <Container fixed sx={{ padding: '100px auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '30px', mt: '50px' }} >
       <br /><br />
       <Title>Tarot reading sessions</Title>
       <br /><br />
       <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px' }}>
         {Data.map((item, index) =>
-          <Grid item lg='3' key={index} sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+          <Grid item xs='12' sm='8' md='4' lg='3' key={index} sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
             {item.img}
-            <Typography color='#FFFFFF' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width='70%'>
+            <Typography color='#FFFFFF' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width={{ xs: '60%', md: '70%' }}>
               {item.title1} <br /> {item.title2}
             </Typography>
           </Grid>
@@ -33,24 +33,25 @@ export const TarrotReading = () => {
         <br /><br />
       </Box>
       <br /><br />
-      <Box>
-        <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '150px' }} >
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
+        <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px' }} >
           Back
         </Button>
-        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '150px' }} >
-          Next
+        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }} >
+          <Link style={{ color: '#000', textDecoration: 'none' }} to="/BookingDetails">
+            Next
+          </Link>
         </Button>
       </Box>
-
 
       <br /><br />
       <Title>Suggestion Card</Title>
       <br /><br />
       <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px' }}>
         {Data.map((item, index) =>
-          <Grid item lg='3' key={index} sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+          <Grid item xs='12' sm='8' md='4' lg='3' key={index} sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
             {item.img}
-            <Typography color='#FFFFFF' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width='70%'>
+            <Typography color='#FFFFFF' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width={{ xs: '60%', md: '70%' }}>
               {item.title1} <br /> {item.title2}
             </Typography>
           </Grid>

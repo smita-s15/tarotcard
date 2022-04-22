@@ -1,46 +1,64 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
-import React from 'react'
+import { AppBar, Box, Toolbar } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import BookMenu from './BookMenu'
+import "@fontsource/montserrat";
+import { MobileMenuBar } from './MblNav';
 
 export const Navbar = () => {
+
     return (
-        <AppBar position='static' color='transparent' sx={{ boxShadow: 'none', }}>
-            <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'space-between', margin: '20px 30px', }}>
-                <NavLink to="/" style={{ justifyContent: 'center', display: 'flex' }} >
-                    <img src={require("../../ui/assets/common/tarot card reading.png")} alt="" style={{ width: '100%' }} />
+        <AppBar position='fixed' color='transparent' sx={{ boxShadow: '0', mt: '15px' }}>
+            <Toolbar variant='dense' 
+                sx={{
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    padding: '10px', 
+                    alignItems: 'center',                   
+                    alignContent: 'center', 
+                    marginX: '50px', 
+                    bgcolor: '#250D25',                 
+                    background: "rgba( 19, 11, 70, 0.25 )",
+                    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+                    backdropFilter: "blur( 4px )",
+                    WebkitBackdropFilter: "blur( 4px )",
+                    border: "1px solid rgba( 255, 255, 255, 0.18 )",
+                    height: 'auto',
+                    borderRadius: '20px',
+                    textAlign: 'center',
+                }}>
+                <NavLink to="/"
+                    style={{
+                        fontStyle: "normal",
+                        fontFamily: 'Bohemian Soul',
+                        fontWeight: 600,
+                        fontSize: { xs: '15px', md: "20px" },
+                        lineHeight: "27px",
+                        textDecoration: 'none',
+                        color: '#FFD76D'
+                    }} >
+                    Tarot Card Reading
                 </NavLink>
-                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '30px', color: '#FFD76DE8' }}>
-                    {data.map((item, index) =>
-                        <NavLink key={index} to={item.link}
-                            style={{
-                                fontStyle: "normal",
-                                fontWeight: 600,
-                                fontSize: "15px",
-                                lineHeight: "18.29px",
-                                fontFamily: "monteserrat",
-                                textDecoration: 'none',
-                                color: '#FFD76D'
-                            }}
-                        >
-                            {item.title}
-                        </NavLink>
-                    )}
-                   <BookMenu />
-                    <NavLink to='/Contact'
-                        style={{
-                            fontStyle: "normal",
-                            fontWeight: 600,
-                            fontSize: "15px",
-                            lineHeight: "18.29px",
-                            fontFamily: "monteserrat",
-                            textDecoration: 'none',
-                            color: '#FFD76D'
-                        }}
-                    >
-                        Contacts
-                    </NavLink>
+                <Box flexDirection='row' sx={{ mr: 2, justifyContent: 'center', alignItems: 'center', display: { xs: 'none', lg: 'block' }, }}
+                >
+                    <Toolbar >
+                        {data.map((item, index) =>
+                            <NavLink key={index} to={item.link}
+                                style={{
+                                    fontStyle: "normal",
+                                    fontFamily: 'montserrat',
+                                    fontWeight: 600,
+                                    fontSize: "15px",
+                                    lineHeight: "18px",
+                                    textDecoration: 'none',
+                                    color: '#FFD76D',
+                                    marginLeft: "30px",
+                                }}
+                            >
+                                {item.title}
+                            </NavLink>
+                        )}
+                    </Toolbar>
                 </Box>
+                <MobileMenuBar />
             </Toolbar>
         </AppBar>
     )
@@ -54,5 +72,17 @@ const data = [
     {
         title: "What I do",
         link: "/WhatIDo"
+    },
+    {
+        title: "Book Sessions ",
+        link: "/BookSessions"
+    },
+    {
+        title: " Services",
+        link: "/Service"
+    },
+    {
+        title: " Contact",
+        link: "/Contact"
     },
 ]

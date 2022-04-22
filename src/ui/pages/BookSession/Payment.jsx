@@ -7,46 +7,48 @@ import { CgPaypal } from "react-icons/cg"
 
 export const Payment = () => {
   return (
-    <Container fixed sx={{ padding: '100px auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '30px', border: '2px solid #FFD76D', borderRadius: '16px', mt: '100px' }}>
-      <br />
-      <Title>Select A Payment Method</Title>
-      <br />
-      <Grid container spacing='10%' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Grid item xs='12' sm='8' md='6'>
-          <Typography variant='h5' color='#FFD76D'>
-            Select Payment Method
-          </Typography>
-          <br />
-          <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', }} startIcon={<AiFillCreditCard />} >
-              credit card
-            </Button>
-            <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', mx: '20px' }} startIcon={<BiTransfer />} >
-              Bank Transfer
-            </Button>
-            <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', }} startIcon={<CgPaypal />} >
-              paypal
-            </Button>
-          </Box>
-          <PaymentForm />
-        </Grid>
-        <Grid item xs='12' sm='8' md='6' >
-          <Box bgcolor='#600060B2' sx={{flexDirection:'column', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius:'21px', width:'80%' }}>
-            <br />
-            <Typography variant='h4' color='#FFFFFF' >
-              Your Session
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: '100px', marginX: 'auto' }}>
+      <Container fixed sx={{ padding: { xs: '10px auto', md: '100px auto' }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', border: '2px solid #FFD76D', borderRadius: '16px', width: '80%' }}>
+        <br /><br />
+        <Title>Select The Payment Methods</Title>
+        <br /><br /><br />
+        <Grid container  sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Grid item xs='12' sm='8' lg='6'>
+            <Typography variant='h5' color='#FFD76D'>
+              Select Payment Method
             </Typography>
-            <br />
-            <img src={require("../../assets/BookSession//Rectangle 45.png")} alt='' width='80%' />
-            <br />
-            <Typography color='#FFFFFF' fontWeight='bold' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width='50%'>
-            20 minutes <br />999/-
-            </Typography>
-          </Box>
+            <br /> <br />
+            <Box sx={{ display: 'flex', alignItems: 'flex-start' , justifyContent:'center', flexDirection:{xs:'column', md:'row'}, gap:'20px' }}>
+              <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', width:{xs:'100%'} }} startIcon={<AiFillCreditCard />} >
+                Credit Card
+              </Button>
+              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D',width:{xs:'100%'} }} startIcon={<BiTransfer />} >
+                Bank Transfer
+              </Button>
+              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D',width:{xs:'100%'} }} startIcon={<CgPaypal />} >
+                Paypal
+              </Button>
+            </Box>
+            <br /><br />
+            <PaymentForm />
+          </Grid>
+          <Grid item xs='12' sm='10' lg='6' sx={{display:'flex', alignItems:'center', justifyContent:'center'}} >
+            <Box bgcolor='#600060B2' sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '21px', padding:'10px 20px', gap:'10px'}}>
+              
+              <Typography variant='h4' color='#FFFFFF' >
+                Your Session
+              </Typography>
+              <img src={require("../../assets/BookSession//Rectangle 45.png")} alt='' width='80%' />
+             
+              <Typography color='#FFFFFF' fontWeight='bold' textAlign='center' margin='20px' border='1px solid #FFFFFF' borderRadius='10px' padding='5px' width='50%'>
+                20 minutes <br />999/-
+              </Typography>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
-      <br />
-    </Container>
+        <br />
+      </Container>
+    </Box>
   )
 }
 
@@ -64,7 +66,7 @@ const PaymentForm = () => {
     <form action="">
       <br />
       <div>
-        <Typography gutterBottom variant="h6" color='#FFD76D' >
+        <Typography gutterBottom variant="h5" color='#FFD76D' >
           Enter Card Name
         </Typography>
         <TextField
@@ -74,7 +76,7 @@ const PaymentForm = () => {
       </div>
       <br />
       <div>
-        <Typography gutterBottom variant="h6" color='#FFD76D' >
+        <Typography gutterBottom variant="h5" color='#FFD76D' >
           Enter Card Number
         </Typography>
         <TextField
@@ -84,7 +86,7 @@ const PaymentForm = () => {
       </div>
       <br />
       <div>
-        <Typography gutterBottom variant="h6" color='#FFD76D' >
+        <Typography gutterBottom variant="h5" color='#FFD76D' >
           Mobile Number
         </Typography>
         <TextField
@@ -94,7 +96,7 @@ const PaymentForm = () => {
       </div>
       <br />
       <div>
-        <Typography gutterBottom variant="h6" color='#FFD76D' >
+        <Typography gutterBottom variant="h5" color='#FFD76D' >
           Enter CVV Code
         </Typography>
         <TextField

@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 export const Footer = () => {
   return (
-    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', borderTop:'1px solid #FFD76D', color:'#FFD76D', flexDirection:'column', gap:'30px', position:'relative', mt:'10%' }}>
+    <Box sx={{ borderTop:'1px solid #FFD76D', color:'#FFD76D',  mt:'100px' }}>
         <Box>
         <br />
             <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', gap:'30px'}}>
@@ -15,7 +15,7 @@ export const Footer = () => {
                 <TwitterIcon style={{height:'60px', width:'60px'}} />
             </Box>
             <br />
-            <Typography color='#FFD76D' >
+            <Typography color='#FFD76D' textAlign='center' margin='20px' >
                 support: eclecticdivinationsbyraina@gmail.com
             </Typography>
         </Box>
