@@ -106,13 +106,13 @@ const PaymentForm = () => {
         />
       </div>
       <br /><br />
-      <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}  disableRipple >
-        <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookingDetails">
+      <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}   >
+        <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookingDetails" disableRipple >
           Back
         </Link>
       </Button>
-      <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}  disableRipple >
-        <Link style={{ color: '#000', textDecoration: 'none' }} to="#">
+      <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}  >
+        <Link style={{ color: '#000', textDecoration: 'none' }} to="#" disableRipple >
           Next
         </Link>
       </Button>
