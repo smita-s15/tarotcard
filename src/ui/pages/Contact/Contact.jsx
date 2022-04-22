@@ -106,7 +106,7 @@ const ContactForm = () => {
                 />
             </div>
             <br /><br />
-            <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black' }} >
+            <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black' }}  disableRipple >
 
                 Contact Us
             </Button>

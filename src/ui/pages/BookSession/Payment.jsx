@@ -20,13 +20,13 @@ export const Payment = () => {
             </Typography>
             <br /> <br />
             <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
-              <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<AiFillCreditCard />} >
+              <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<AiFillCreditCard />}  disableRipple >
                 Credit Card
               </Button>
-              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<BiTransfer />} >
+              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<BiTransfer />}  disableRipple>
                 Bank Transfer
               </Button>
-              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<CgPaypal />} >
+              <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', width: { xs: '100%' }, cursor: 'pointer' }} startIcon={<CgPaypal />}  disableRipple >
                 Paypal
               </Button>
             </Box>
@@ -106,12 +106,12 @@ const PaymentForm = () => {
         />
       </div>
       <br /><br />
-      <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }} >
+      <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}  disableRipple >
         <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookingDetails">
           Back
         </Link>
       </Button>
-      <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }} >
+      <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}  disableRipple >
         <Link style={{ color: '#000', textDecoration: 'none' }} to="#">
           Next
         </Link>
