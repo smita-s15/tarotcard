@@ -33,7 +33,7 @@ export const MobileMenuBar = () => {
             WebkitBackdropFilter: "blur( 4px )",
             border: "1px solid rgba( 255, 255, 255, 0.18 )",
             height: 'auto',
-            borderRadius: '20px 20px 0 0',
+            borderRadius: '20px',
             textAlign: 'center',
             gap: '10px',
             marginX: "auto",

@@ -13,7 +13,7 @@ export const Navbar = () => {
                     justifyContent: 'space-between', 
                     alignItems: 'center',                   
                     alignContent: 'center', 
-                    marginX: '50px', 
+                    marginX: '10px', 
                     bgcolor: '#250D25',                 
                     background: "rgba( 19, 11, 70, 0.25 )",
                     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",

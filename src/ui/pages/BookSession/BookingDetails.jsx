@@ -2,7 +2,9 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
+
+
 
 export const BookingDetails = () => {
   return (
@@ -37,14 +39,47 @@ export const BookingDetails = () => {
           </Typography>
         </Box>
         <br />  <br />
-        <Grid container >
-          <Grid item xs='8' lg='5' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1em' }}>
-            <Box width='50%' bgcolor='#FFFFF'>
-              <Calendar />
+        <Grid container spacing='10px' margin='10px' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }} >
+          <Grid item sm='10' md='10'  lg='6' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Box sx={{
+              width:'60%',
+              backgroundColor: 'gray',
+              borderRadius: '10px',
+              fontFamily: 'montserrat',
+              textDecoration: 'none',
+              fontSize: {xs:'10px' ,sm:'15px'},
+              padding:'30px', 
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center',
+              lineHeight:'30px'
+            }}>
+              <Calendar/>
             </Box>
           </Grid>
-          <Grid item lg='6'>
-
+          <Grid item lg='6' md='10' sm='12' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius:'10px', flexDirection:'column'  }}>
+            <Box padding='20px' bgcolor='#321F36' borderRadius={5} marginX='10px' >
+            <Box >
+              {Data1.map((item, index) =>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px', sm:'10px'} }} >{item.title}</Button>
+              )}
+            </Box> 
+            <Box >
+              {Data2.map((item, index) =>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }} >{item.title}</Button>
+              )}
+            </Box> 
+            <Box >
+              {Data3.map((item, index) =>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }} >{item.title}</Button>
+              )}
+            </Box> 
+            <Box >
+              {Data4.map((item, index) =>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }} >{item.title}</Button>
+              )}
+            </Box>        
+            </Box>
           </Grid>
         </Grid>
         <br />
@@ -53,7 +88,7 @@ export const BookingDetails = () => {
         </Typography>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
-          <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D',  margin: '20px', width: '170px' }} >
+          <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', margin: '20px', width: '170px' }} >
             <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/TarrotReading">
               Back
             </Link>
@@ -70,6 +105,63 @@ export const BookingDetails = () => {
   )
 }
 
+
+const Data1 = [ 
+  {
+    title:'1'
+  },
+  {
+    title:'2'
+  },
+  {
+    title:'3'
+  },
+  {
+    title:'4'
+  },
+]
+const Data2 = [ 
+  {
+    title:'5'
+  },
+  {
+    title:'6'
+  },
+  {
+    title:'7'
+  },
+  {
+    title:'8'
+  },
+]
+const Data3 = [ 
+  {
+    title:'9'
+  },
+  {
+    title:'10'
+  },
+  {
+    title:'11'
+  },
+  {
+    title:'12'
+  },
+]
+const Data4 = [ 
+  {
+    title:'13'
+  },
+  {
+    title:'14'
+  },
+  {
+    title:'15'
+  },
+  {
+    title:'16'
+  },
+]
 
 
 
