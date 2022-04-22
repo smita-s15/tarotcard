@@ -38,11 +38,12 @@ export const MobileMenuBar = () => {
             gap: '10px',
             marginX: "auto",
             alignItems: 'center',
+            marginTop:'10px'
           }
         }}
       >
         {data?.map((item, index) => {
-          return <Box key={index} sx={{ display: 'flex', justifyContent: 'center', marginX: 'auto', alignItems: 'center', flexDirection: 'column',  }}  >
+          return <Box key={index} sx={{ display: 'flex', justifyContent: 'center', marginX: 'auto', alignItems: 'center', flexDirection: 'column',   }}  >
             <NavLink
               onClick={toggleDrawer(false)}
               style={({
