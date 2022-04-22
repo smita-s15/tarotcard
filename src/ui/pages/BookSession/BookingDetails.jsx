@@ -22,10 +22,10 @@ export const BookingDetails = () => {
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '30px', marginTop: '10px' }}>
-            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' } }}  >
+            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}  >
               Audio Call
             </Button>
-            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' } }}>
+            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}>
               Video Call
             </Button>
           </Box>
@@ -39,7 +39,7 @@ export const BookingDetails = () => {
         <br />  <br />
         <Grid container >
           <Grid item xs='8' lg='5' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1em' }}>
-            <Box width='50%'>
+            <Box width='50%' bgcolor='#FFFFF'>
               <Calendar />
             </Box>
           </Grid>
@@ -53,10 +53,12 @@ export const BookingDetails = () => {
         </Typography>
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
-          <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px' }} >
-            Back
+          <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D',  margin: '20px', width: '170px' }} >
+            <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/TarrotReading">
+              Back
+            </Link>
           </Button>
-          <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }} >
+          <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px', cursor: 'pointer' }} >
             <Link style={{ color: '#000', textDecoration: 'none' }} to="/Payment">
               Proceed to Payment
             </Link>

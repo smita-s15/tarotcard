@@ -4,7 +4,7 @@ import './index.css'
 const defaultTheme = createTheme({
     palette: {
         background: {
-            default: "#400040"
+            default: "#2D1022"
         },
         primary: {
             main: "#000000",

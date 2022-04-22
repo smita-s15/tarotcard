@@ -23,7 +23,7 @@ export const BookSessions = () => {
         <Typography variant='h6' color='#FFD76D99' textAlign='center'>
           The tarot is in essence a soul map, a deep psychological guide to self-empowerment as imaged through 78 symbolic cards.which can help you get a deep insight into your situations and find solutions
         </Typography>
-        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }} >
+        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px', cursor:'pointer' }} >
           <Link style={{ color: '#000', textDecoration: 'none' }} to="/TarrotReading">
             Book Session
           </Link>

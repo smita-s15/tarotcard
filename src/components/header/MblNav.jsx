@@ -52,7 +52,7 @@ export const MobileMenuBar = () => {
                 lineHeight: "19px",
                 color:'#FFD76D',
                 textDecoration: 'none',
-                margin:'10px'
+                margin:'10px', cursor:'pointer'
 
               })}
               to={item.link}

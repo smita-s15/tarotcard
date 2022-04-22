@@ -11,7 +11,6 @@ export const Navbar = () => {
                 sx={{
                     display: 'flex', 
                     justifyContent: 'space-between', 
-                    padding: '10px', 
                     alignItems: 'center',                   
                     alignContent: 'center', 
                     marginX: '50px', 
@@ -33,7 +32,8 @@ export const Navbar = () => {
                         fontSize: { xs: '15px', md: "20px" },
                         lineHeight: "27px",
                         textDecoration: 'none',
-                        color: '#FFD76D'
+                        color: '#FFD76D',
+                        cursor:'pointer'
                     }} >
                     Tarot Card Reading
                 </NavLink>
@@ -51,6 +51,7 @@ export const Navbar = () => {
                                     textDecoration: 'none',
                                     color: '#FFD76D',
                                     marginLeft: "30px",
+                                    cursor:'pointer'
                                 }}
                             >
                                 {item.title}
