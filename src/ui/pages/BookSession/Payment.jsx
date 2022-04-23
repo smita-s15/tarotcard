@@ -4,7 +4,7 @@ import { Title } from '../../../components/common/Title'
 import { AiFillCreditCard } from "react-icons/ai"
 import { BiTransfer } from "react-icons/bi"
 import { CgPaypal } from "react-icons/cg"
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const Payment = () => {
   return (

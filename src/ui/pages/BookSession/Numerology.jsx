@@ -1,6 +1,6 @@
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 
 export const Numerology = () => {
