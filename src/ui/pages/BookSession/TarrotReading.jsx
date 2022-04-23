@@ -35,12 +35,12 @@ export const TarrotReading = () => {
       <br /><br />
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
         <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}   >
-          <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookSessions" disableRipple >
+          <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookSessions"   >
             Back
           </Link>
         </Button>
         <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}   >
-          <Link style={{ color: '#000', textDecoration: 'none' }} to="/BookingDetails" disableRipple >
+          <Link style={{ color: '#000', textDecoration: 'none' }} to="/BookingDetails"   >
             Next
           </Link>
         </Button>

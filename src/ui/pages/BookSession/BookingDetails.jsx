@@ -24,10 +24,10 @@ export const BookingDetails = () => {
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '30px', marginTop: '10px' }}>
-            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}  disableRipple >
+            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}    >
               Audio Call
             </Button>
-            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}  disableRipple>
+            <Button variant='contained' sx={{ bgcolor: '#FFFFFF', color: '#3E0343', textTransform: 'inherit', padding: { xs: '5px 1px', md: '10px 30px' }, cursor: 'pointer' }}   >
               Video Call
             </Button>
           </Box>
@@ -61,22 +61,22 @@ export const BookingDetails = () => {
             <Box padding='20px' bgcolor='#321F36' borderRadius={5} marginX='10px' >
             <Box >
               {Data1.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px', sm:'10px'} }}  disableRipple>{item.title}</Button>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px', sm:'10px'} }}   >{item.title}</Button>
               )}
             </Box> 
             <Box >
               {Data2.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}  disableRipple >{item.title}</Button>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}    >{item.title}</Button>
               )}
             </Box> 
             <Box >
               {Data3.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}  disableRipple >{item.title}</Button>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}    >{item.title}</Button>
               )}
             </Box> 
             <Box >
               {Data4.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}  disableRipple>{item.title}</Button>
+              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}   >{item.title}</Button>
               )}
             </Box>        
             </Box>
@@ -89,12 +89,12 @@ export const BookingDetails = () => {
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
           <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', margin: '20px', width: '170px',  }}  >
-            <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/TarrotReading" disableRipple >
+            <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/TarrotReading"   >
               Back
             </Link>
           </Button>
           <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px', cursor: 'pointer' }}   >
-            <Link style={{ color: '#000', textDecoration: 'none' }} to="/Payment" disableRipple >
+            <Link style={{ color: '#000', textDecoration: 'none' }} to="/Payment"   >
               Proceed to Payment
             </Link>
           </Button>
