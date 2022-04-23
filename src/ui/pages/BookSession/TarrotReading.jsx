@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 
 export const TarrotReading = () => {
@@ -33,17 +33,24 @@ export const TarrotReading = () => {
         <br /><br />
       </Box>
       <br /><br />
-      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
-        <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}   >
-          <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookSessions"   >
+
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '30px' }}>
+        <NavLink
+          style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+          to="/BookSessions"
+        >
+          <Button size="large" variant="outlined"   >
             Back
-          </Link>
-        </Button>
-        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}   >
-          <Link style={{ color: '#000', textDecoration: 'none' }} to="/BookingDetails"   >
+          </Button>
+        </NavLink>
+        <NavLink
+          style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+          to="/BookingDetails"
+        >
+          <Button size="large" variant="contained"     >
             Next
-          </Link>
-        </Button>
+          </Button>
+        </NavLink>
       </Box>
 
       <br /><br />

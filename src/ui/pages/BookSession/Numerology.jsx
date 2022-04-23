@@ -1,6 +1,6 @@
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 
 export const Numerology = () => {
@@ -89,16 +89,22 @@ const NumerologyForm = () => {
             </div>
             <br /><br />
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '30px' }}>
-                <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', color: '#FFD76D', margin: '20px', width: '170px', cursor: 'pointer' }}  >
-                    <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/BookSessions"   >
-                        Back
-                    </Link>
-                </Button>
-                <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}   >
-                    <Link style={{ color: '#000', textDecoration: 'none' }} to="#"   >
-                        Done
-                    </Link>
-                </Button>
+                <NavLink
+                    style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+                    to="/BookSessions"
+                >
+                    <Button size="large" variant="outlined"   >
+                    Back
+                    </Button>
+                </NavLink>
+                <NavLink
+                    style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+                    to="#"
+                >
+                    <Button size="large" variant="contained"     >
+                    Done
+                    </Button>
+                </NavLink>
             </Box>
             <br /><br />
         </form>

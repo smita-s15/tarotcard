@@ -1,6 +1,6 @@
 import { Button, Container, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 
 export const BookSessions = () => {
@@ -23,11 +23,14 @@ export const BookSessions = () => {
         <Typography variant='h6' color='#FFD76D99' textAlign='center'>
           The tarot is in essence a soul map, a deep psychological guide to self-empowerment as imaged through 78 symbolic cards.which can help you get a deep insight into your situations and find solutions
         </Typography>
-        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px', cursor:'pointer' }}   >
-          <Link style={{ color: '#000', textDecoration: 'none' }} to="/TarrotReading"   >
+        <NavLink
+          style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+          to="/TarrotReading"
+        >
+          <Button size="large" variant="contained"   >
             Book Session
-          </Link>
-        </Button>
+          </Button>
+        </NavLink>
 
         <br />
         <Typography color='#ffffff' textAlign='center' width='60%' fontSize='20px' margin='20px auto' border='1px solid #FFD76D' borderRadius='10px' padding='10px'>
@@ -43,11 +46,15 @@ export const BookSessions = () => {
         <Typography variant='h6' color='#FFD76D99' textAlign='center'>
           Numerology is the belief in a divine or mystical relationship between a number and one or more coinciding event Numerology is the study of particular numbers, such as a persons date of birth, in the belief that they may have special significance in a persons life.. It is also the study of the numerical value of the letters in words, names, and ideas
         </Typography>
-        <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px' }}   >
-          <Link style={{ color: '#000', textDecoration: 'none' }} to="/Numerology"   >
+       
+        <NavLink
+          style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+          to="/Numerology"
+        >
+          <Button size="large" variant="contained"     >
             Numerology
-          </Link>
-        </Button>
+          </Button>
+        </NavLink>
 
         <br />
         <Typography color='#ffffff' textAlign='center' width='60%' fontSize='20px' margin='20px auto' border='1px solid #FFD76D' borderRadius='10px' padding='10px'>

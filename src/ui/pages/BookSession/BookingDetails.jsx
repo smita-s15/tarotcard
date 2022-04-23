@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Title } from '../../../components/common/Title'
 import Calendar from 'react-calendar';
 
@@ -40,45 +40,45 @@ export const BookingDetails = () => {
         </Box>
         <br />  <br />
         <Grid container spacing='10px' margin='10px' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }} >
-          <Grid item sm='10' md='10'  lg='6' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <Grid item sm='10' md='10' lg='6' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box sx={{
-              width:'60%',
+              width: '60%',
               backgroundColor: 'gray',
               borderRadius: '10px',
               fontFamily: 'montserrat',
               textDecoration: 'none',
-              fontSize: {xs:'10px' ,sm:'15px'},
-              padding:'30px', 
-              display:'flex',
-              alignItems:'center',
-              justifyContent:'center',
-              lineHeight:'30px'
+              fontSize: { xs: '10px', sm: '15px' },
+              padding: '30px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              lineHeight: '30px'
             }}>
-              <Calendar/>
+              <Calendar />
             </Box>
           </Grid>
-          <Grid item lg='6' md='10' sm='12' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius:'10px', flexDirection:'column'  }}>
+          <Grid item lg='6' md='10' sm='12' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '10px', flexDirection: 'column' }}>
             <Box padding='20px' bgcolor='#321F36' borderRadius={5} marginX='10px' >
-            <Box >
-              {Data1.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px', sm:'10px'} }}   >{item.title}</Button>
-              )}
-            </Box> 
-            <Box >
-              {Data2.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}    >{item.title}</Button>
-              )}
-            </Box> 
-            <Box >
-              {Data3.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}    >{item.title}</Button>
-              )}
-            </Box> 
-            <Box >
-              {Data4.map((item, index) =>
-              <Button key={index} variant='contained'sx={{ bgcolor: '#FFFFFF', color: 'black', margin: {xs:'5px' ,sm:'10px'}  }}   >{item.title}</Button>
-              )}
-            </Box>        
+              <Box >
+                {Data1.map((item, index) =>
+                  <Button key={index} variant='contained' sx={{ bgcolor: '#FFFFFF', color: 'black', margin: { xs: '5px', sm: '10px' } }}   >{item.title}</Button>
+                )}
+              </Box>
+              <Box >
+                {Data2.map((item, index) =>
+                  <Button key={index} variant='contained' sx={{ bgcolor: '#FFFFFF', color: 'black', margin: { xs: '5px', sm: '10px' } }}    >{item.title}</Button>
+                )}
+              </Box>
+              <Box >
+                {Data3.map((item, index) =>
+                  <Button key={index} variant='contained' sx={{ bgcolor: '#FFFFFF', color: 'black', margin: { xs: '5px', sm: '10px' } }}    >{item.title}</Button>
+                )}
+              </Box>
+              <Box >
+                {Data4.map((item, index) =>
+                  <Button key={index} variant='contained' sx={{ bgcolor: '#FFFFFF', color: 'black', margin: { xs: '5px', sm: '10px' } }}   >{item.title}</Button>
+                )}
+              </Box>
             </Box>
           </Grid>
         </Grid>
@@ -87,18 +87,26 @@ export const BookingDetails = () => {
           *Sunday sessions need to be Pre-booked as early as possible
         </Typography>
 
-        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '20px' }}>
-          <Button size="large" variant="outlined" style={{ textTransform: 'inherit' }} sx={{ borderColor: '#FFD76D', margin: '20px', width: '170px',  }}  >
-            <Link style={{ color: '#FFD76D', textDecoration: 'none' }} to="/TarrotReading"   >
+        <br /> <br />
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '30px' }}>
+          <NavLink
+            style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+            to="/TarrotReading"
+          >
+            <Button size="large" variant="outlined"   >
               Back
-            </Link>
-          </Button>
-          <Button size="large" variant="contained" style={{ textTransform: 'inherit' }} sx={{ bgcolor: '#FFD76D', color: 'black', margin: '20px', width: '170px', cursor: 'pointer' }}   >
-            <Link style={{ color: '#000', textDecoration: 'none' }} to="/Payment"   >
-              Proceed to Payment
-            </Link>
-          </Button>
+            </Button>
+          </NavLink>
+          <NavLink
+            style={{ textDecoration: 'none', color: '#000', cursor: 'pointer' }}
+            to="/Payment"
+          >
+            <Button size="large" variant="contained"     >
+              Next
+            </Button>
+          </NavLink>
         </Box>
+
         <br /> <br />
       </Container>
     </Box>
@@ -106,60 +114,60 @@ export const BookingDetails = () => {
 }
 
 
-const Data1 = [ 
+const Data1 = [
   {
-    title:'1'
+    title: '1'
   },
   {
-    title:'2'
+    title: '2'
   },
   {
-    title:'3'
+    title: '3'
   },
   {
-    title:'4'
-  },
-]
-const Data2 = [ 
-  {
-    title:'5'
-  },
-  {
-    title:'6'
-  },
-  {
-    title:'7'
-  },
-  {
-    title:'8'
+    title: '4'
   },
 ]
-const Data3 = [ 
+const Data2 = [
   {
-    title:'9'
+    title: '5'
   },
   {
-    title:'10'
+    title: '6'
   },
   {
-    title:'11'
+    title: '7'
   },
   {
-    title:'12'
+    title: '8'
   },
 ]
-const Data4 = [ 
+const Data3 = [
   {
-    title:'13'
+    title: '9'
   },
   {
-    title:'14'
+    title: '10'
   },
   {
-    title:'15'
+    title: '11'
   },
   {
-    title:'16'
+    title: '12'
+  },
+]
+const Data4 = [
+  {
+    title: '13'
+  },
+  {
+    title: '14'
+  },
+  {
+    title: '15'
+  },
+  {
+    title: '16'
   },
 ]
 
