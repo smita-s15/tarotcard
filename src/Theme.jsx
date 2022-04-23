@@ -7,12 +7,12 @@ const defaultTheme = createTheme({
             default: "#2D1022"
         },
         primary: {
-            main: "#000000",
-            dark: "#000000",
+            main: "#FFFFFF",
+            dark: "#FFD76D",
         },
         secondary: {
-            main: "#FED5C3",
-            light: "#B4C9CE",
+            main: "#FFD76D",
+            light: "#FFD76D",
         },
     },
     breakpoints: {
