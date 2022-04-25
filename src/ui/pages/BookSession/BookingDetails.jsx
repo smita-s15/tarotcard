@@ -5,7 +5,6 @@ import { Title } from '../../../components/common/Title'
 import Calendar from 'react-calendar';
 
 
-
 export const BookingDetails = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: '100px', marginX: 'auto' }}>

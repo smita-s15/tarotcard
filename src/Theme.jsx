@@ -12,7 +12,7 @@ const defaultTheme = createTheme({
         },
         secondary: {
             main: "#FFD76D",
-            light: "#FFD76D",
+            light: "#FFD76D99",
         },
     },
     breakpoints: {

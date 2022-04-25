@@ -1,12 +1,12 @@
 import React from "react"
 import { Button, TextField, Typography } from "@mui/material"
 import * as Yup from "yup";
-import { Form, Formik } from "formik"
-import { object, string } from "yup"
 import { useFormik } from "formik";
+import axios from "axios";
 
 
 export const ContactForm = () => {
+    const baseUrl = 'http://localhost:8000'
 
     const formik = useFormik({
         initialValues: {
@@ -33,8 +33,17 @@ export const ContactForm = () => {
 
         }),
 
-        onSubmit: (val, { resetForm }) => {
-            console.log("val", val);
+
+        onSubmit: async (val) => {
+            try {
+                await axios.post(`${baseUrl}/users`, val)
+
+                alert("Form submitted successfully!")
+                return
+            } catch (error) {
+                alert("Form submission error!")
+                return
+            }
         }
     });
     return (
@@ -89,7 +98,7 @@ export const ContactForm = () => {
                         onChange={formik.handleChange}
                         value={formik.values.phone}
                         onBlur={formik.handleBlur}
-                        sx={{ background: '#3C1D3F', width: '100%', input: { color: '#ffffff' }}}
+                        sx={{ background: '#3C1D3F', width: '100%', input: { color: '#ffffff' } }}
                     />
                     <small >
                         {formik.touched.phone && formik.errors.phone ? (
@@ -108,7 +117,7 @@ export const ContactForm = () => {
                         onChange={formik.handleChange}
                         value={formik.values.message}
                         onBlur={formik.handleBlur}
-                        sx={{ background: '#3C1D3F', width: '100%', input: { color: '#ffffff' }, focus:'none' }}
+                        sx={{ background: '#3C1D3F', width: '100%', input: { color: '#ffffff' }, focus: 'none' }}
                     />
                     <small >
                         {formik.touched.message && formik.errors.message ? (
